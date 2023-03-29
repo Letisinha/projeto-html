@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <X-Content-Type-Options: nosniff>
+    <title>Consulta CEP</title>
+</head>
+<body>
+    <div>
+            <h1>Consultando CEP</h1>
+    <form method="POST" action="http://192.168.1.7:3000/cliente/gravar" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input type="text" class="form-control" maxlength="03" id="id">
+                <small>ID do usuário</small>
+                <button type="button" class="btn" id="idsubmit" type="submit" onclick="getbyid()">Buscar ID</button>
+            </div> 
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" maxlength="200" id="name">
+                <small>Nome completo</small>               
+            </div>
+            <div class="form-group">
+               <label for="telefone">Telefone</label>
+               <input type="text" class="form-control" maxlength="15" id="telefone">
+               <small>Telefone</small>               
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" maxlength="40" id="email">
+                <small>E-mail</small>  
+            <button type="button" class="btn" id="mailsubmit" type="submit" onclick="getemail()">Buscar email</button>
+            </div>
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" maxlength="9" id="cep">
+                <small>00000-000</small>
+                <button type="button" id="cepsubmit" class="btn" type="submit" onclick="buscarCep()" >Buscar cep</button>
+            </div>
+            <div class="form-group">
+                <label for="logradouro">Endereço</label>
+                <input type="text" class="form-control" id="logradouro">
+                <small>Rua.</small>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id="bairro">
+                <small>Bairro</small>
+            </div>
+            <div class="form-group">
+                <label for="localidade">Cidade</label>
+                <input type="text" class="form-control" id="localidade">
+                <small>Cidade</small>
+            </div>
+            <div class="form-group">
+                <label for="uf">UF</label>
+                <input type="text" class="form-control" id="uf">
+                <small>Estado</small>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número</label>
+                <input type="text" class="form-control" id="numero">
+                <small>Número da casa</small>
+            </div>
+            <div class="form-group">
+                <label for="complemento">Complemento</label>
+                <input type="text" class="form-control" id="complemento">
+                <small>Complemento</small>
+            </div>
+            <div class="selection">
+                <label for="tipo_cliente">Selecione o tipo de cliente:</label>
+                <select id="tipo_cliente_id" name="tipo"></select>
+            </div>
+            <button type="submit" class="btn" id="subform" onclick="cadastro()">Enviar</button>
+        </form>
+    </div>
+    
+</body>
+<script src="./jquery-3.6.4.min.js"> </script>
+<script src="./main.js"> </script> 
+</html>
